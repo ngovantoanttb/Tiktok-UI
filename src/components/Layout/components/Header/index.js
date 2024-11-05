@@ -1,12 +1,57 @@
 import classNames from 'classnames/bind';
-import styles from './Header.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleXmark, faSpinner, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css'; // optional
 
-const cx = classNames.bind(styles)
+import styles from './Header.module.scss';
+import images from '~/assets/images';
+import { useEffect, useState } from 'react';
+
+const cx = classNames.bind(styles);
 
 function Header() {
-    return ( 
+    const [searchResult, setSearchResult] = useState([])
+
+    useEffect(() => {
+        setTimeout(() => {
+            setSearchResult([1, 2, 3])
+        }, 3000)
+    })
+
+    return (
         <header className={cx('wrapper')}>
-            <div className={cx('inner')}></div>
+            <div className={cx('inner')}>
+                
+                <div className={cx('logo')}>
+                    <img src={images.logo} alt="Logo Tiktok" />
+                </div>
+
+                <Tippy
+                    interactive
+                    visible={searchResult.length > 0}
+                    render={(attrs) => (
+                        <div className={cx('search-result')} tabIndex="-1" {...attrs}>
+                            Kết quả
+                        </div>
+                    )}
+                >
+                    <div className={cx('search')}>
+                        <input placeholder="Search accounts and videos" spellCheck={false} />
+                        <button className={cx('clear')}>
+                            <FontAwesomeIcon icon={faCircleXmark} />
+                        </button>
+
+                        <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />
+
+                        <button className={cx('search-btn')}>
+                            <FontAwesomeIcon icon={faMagnifyingGlass} />
+                        </button>
+                    </div>
+                </Tippy>
+
+                <div className={cx('actions')}>Actions</div>
+            </div>
         </header>
     );
 }

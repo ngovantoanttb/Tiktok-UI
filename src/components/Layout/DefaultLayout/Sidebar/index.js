@@ -9,6 +9,7 @@ function Sidebar() {
         <aside className={cx('wrapper')}>
             <h2>Sidebar</h2>
         </aside>
+        
     )
 }
 
