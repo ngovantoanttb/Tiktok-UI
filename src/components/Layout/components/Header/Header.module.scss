@@ -23,10 +23,13 @@
     display: flex;
 }
 
+.search, .search-result {
+    width: 361px;
+}
+
 .search {
     position: relative;
     display: flex;
-    width: 361px;
     height: var(--search-height);
     border-radius: var(--search-border-radius);
     border: 1.5px solid transparent;
@@ -61,13 +64,20 @@
     }
     
     &:hover .search-btn {
-        color: var(--black); /* Đổi màu chữ khi hover */
-        background-color: rgba(22, 24, 35, 0.06); /* Đổi màu nền khi hover */
+        color: var(--black);
+        background-color: rgba(22, 24, 35, 0.06); 
     }
 
     &:focus-within {
             border: 1.5px solid rgb(22, 24, 35, 0.2);
         }
+}
+
+.search-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    color: rgb(22, 24, 35, 0.5);
 }
 .clear,
 .loading {
@@ -94,5 +104,9 @@
     &:active {
         background-color: rgb(22, 24, 35, 0.12);
     }
+}
+
+.custom-login {
+    color: aqua;
 }
 

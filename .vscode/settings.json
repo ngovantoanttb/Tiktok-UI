@@ -1,5 +1,6 @@
 {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "cSpell.enableFiletypes": ["!javascript", "!json", "!scss"]
+    "cSpell.enableFiletypes": ["!javascript", "!json", "!scss"],
+    "CodeGPT.apiKey": "CodeGPT Plus Beta"
 }
