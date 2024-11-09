@@ -57,7 +57,7 @@ function Button({
 
     return (
         <Comp className={classes} {...props}>
-            {leftIcon && <san className={cx('icon')}>{leftIcon}</san>}
+            {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
             <span className={cx('title')}>{children}</span>
             {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}
         </Comp>
