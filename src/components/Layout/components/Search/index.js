@@ -1,13 +1,13 @@
 import classNames from 'classnames/bind';
 import { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faL, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import HeadlessTippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css'; // optional
 
-import { Wrapper as PopperWrapper } from 'public/components/Popper';
-import AccountItem from 'public/components/AccountItem';
-import { SearchIcon } from 'public/components/Icons';
+import { Wrapper as PopperWrapper } from '~/components/Popper';
+import AccountItem from '~/components/AccountItem';
+import { SearchIcon } from '~/components/Icons';
 import styles from './Search.module.scss';
 
 const cx = classNames.bind(styles);

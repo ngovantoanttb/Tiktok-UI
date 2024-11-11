@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './AccountItem.module.scss';
-import Image from 'public/components/Image';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
