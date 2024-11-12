@@ -9,7 +9,7 @@ import Header from '~/components/Popper/Menu/Header';
 const cx = classNames.bind(styles);
 const defaultFn = () => {};
 
-function Menu({ children, items = [], onClick = defaultFn }) {
+function Menu({ children, items = [], hideOnClick = false, onClick = defaultFn }) {
     const [history, setHistory] = useState([{ data: items }]);
 
     const current = history[history.length - 1];
@@ -38,6 +38,7 @@ function Menu({ children, items = [], onClick = defaultFn }) {
             interactive
             delay={[0, 700]}
             offset={[16, 8]}
+            hideOnClick={hideOnClick}
             placement="bottom-end"
             render={(attrs) => (
                 <div className={cx('menu-list')} tabIndex="-1" {...attrs}>

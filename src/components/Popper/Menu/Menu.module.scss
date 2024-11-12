@@ -3,7 +3,7 @@
     width: 224px;
 
     .menu-item {
-        font-family: 'IBM Plex Sans', sans-serif;
+        font-family: var(--font-family);
         color: var(--black);
         margin-left: 0;
     }
